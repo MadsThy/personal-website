@@ -8,16 +8,16 @@ about.addEventListener("click", () => {
         title: "About Me",
         width: "400px",
         height: "400px",
-        top: 50,
-        right: 50,
-        bottom: 50,
-        left: 50,
+        class: ["no-full"],
         mount: aboutContent,
         onfocus: function() {
-            this.setBackground("#00aa00");
+            this.setBackground("#00df00");
+            if (window.innerWidth < 400) {
+                this.resize("85%", "60%");
+            }
         },
         onblur: function() {
-            this.setBackground("#777");
+            this.setBackground("#555");
         },
     });
 });
@@ -27,16 +27,16 @@ contact.addEventListener("click", () => {
         title: "Contact Me",
         width: "400px",
         height: "400px",
-        top: 150,
-        right: 50,
-        bottom: 50,
-        left: 250,
+        class: ["no-full"],
         mount: contactContent,
         onfocus: function() {
-            this.setBackground("#00aa00");
+            this.setBackground("#00df00");
+            if (window.innerWidth < 400) {
+                this.resize("95%", "60%");
+            }
         },
         onblur: function() {
-            this.setBackground("#777");
+            this.setBackground("#555");
         },
     });
 });
